@@ -1,0 +1,29 @@
+{
+    "productos": {
+        "1": [
+            "Tecate roja",
+            "44 pesos",
+            "images/tecate roja.jpg"
+        ],
+        "2": [
+            "Tecate Blanca",
+            "50 pesos",
+            "images/tecate blanca.jpg"
+        ],
+        "3": [
+            "Indio",
+            "43 pesos",
+            "images/indio.jpg"
+        ],
+        "4": [
+            "Miller",
+            "66 pesos",
+            "images/miller.jpg"
+        ],
+        "5": [
+            "Corona",
+            "69 pesos",
+            "images/corona.jpg"
+        ]
+    }
+}

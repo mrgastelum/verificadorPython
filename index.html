@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let productos =
+        [
+            ["1", "Tecate Roja", "44 pesos", "tecate roja.jpg"],
+            ["2", "Tecate Blanca", "50 pesos", "tecate blanca.jpg"],
+            ["3", "Indio", "43 pesos", "indio.jpg"],
+            ["4", "Miller", "66 pesos", "miller.jpg"],
+            ["5", "Corona", "69 pesos", "corona.jpg"]
+        ];
+
+        if (window.addEventListener) {
+            var codigo = "";
+            window.addEventListener("keydown", function (e) {
+                codigo += String.fromCharCode(e.keyCode);
+                if (e.keyCode == 13) {
+                    //alert(codigo);
+                    buscar(codigo);
+                    codigo = "";
+                    setTimeout(() => {
+                        window.location.reload();
+                    },6000)
+                }
+
+            }, true);
+        }
+
+        function buscar(codigo) {
+            for (let index = 0; index < productos.length; index++) {
+                if (productos[index][0] == codigo.trim()) {
+                    //alert(productos[index][1]);
+                    const labelname = document.getElementById('lblname');
+                    const labelprecio = document.getElementById('lblprecio');
+                    const imgprod = document.getElementById('img');
+                    labelname.textContent = productos[index][1];
+                    labelprecio.textContent = productos[index][2];
+                    imgprod.src = '' + productos[index][3];
+                   
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <style>
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -105px;
+            margin-left: -105px;
+        }
+    </style>
+    <img src="C:\Users\PC.PC\Desktop\python\images\cbarras.gif">
+</body>
+    
+</body>
+</html>
